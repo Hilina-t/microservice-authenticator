@@ -11,14 +11,14 @@ type Config struct {
 	ServerPort string
 
 	// OAuth/OIDC settings
-	OAuthProvider       string // google, okta, azure
-	OAuthClientID       string
-	OAuthClientSecret   string
-	OAuthRedirectURL    string
-	OAuthAuthURL        string
-	OAuthTokenURL       string
-	OAuthUserInfoURL    string
-	OAuthScopes         []string
+	OAuthProvider     string // google, okta, azure
+	OAuthClientID     string
+	OAuthClientSecret string
+	OAuthRedirectURL  string
+	OAuthAuthURL      string
+	OAuthTokenURL     string
+	OAuthUserInfoURL  string
+	OAuthScopes       []string
 
 	// JWT settings
 	JWTSecret     string
