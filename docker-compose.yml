@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  iag:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+      - OAUTH_PROVIDER=${OAUTH_PROVIDER}
+      - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID}
+      - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET}
+      - OAUTH_REDIRECT_URL=${OAUTH_REDIRECT_URL}
+      - OKTA_DOMAIN=${OKTA_DOMAIN}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION_HOURS=${JWT_EXPIRATION_HOURS:-24}
+      - ENABLE_RBAC=${ENABLE_RBAC:-true}
+    restart: unless-stopped
